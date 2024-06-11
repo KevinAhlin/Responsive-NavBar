@@ -8,7 +8,7 @@
 
 body {
   min-height: 100vh;
-  background-image: url(golfcourse-image2.jpg);
+  background-image: url(images/golfcourse-image2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,4 +40,52 @@ nav a {
   display: flex;
   align-items: center;
   color: black;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.169);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li,
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 380px) {
+  .sidebar {
+    width: 100%;
+  }
 }
